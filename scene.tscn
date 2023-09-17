@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://dahbpcj7068bo"]
+
+[ext_resource type="PackedScene" uid="uid://v67ejsxt138o" path="res://sprite.tscn" id="1_oqfhs"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Button" type="Button" parent="."]
+offset_left = 75.0
+offset_top = 57.0
+offset_right = 233.0
+offset_bottom = 185.0
+text = "Toggle Motion"
+
+[node name="Icon" parent="." instance=ExtResource("1_oqfhs")]
+position = Vector2(610, 341)
+
+[connection signal="pressed" from="Button" to="Icon" method="OnButtonPressed"]

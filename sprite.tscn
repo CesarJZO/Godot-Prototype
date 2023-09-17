@@ -4,6 +4,5 @@
 [ext_resource type="Script" path="res://MySprite.cs" id="2_uovsi"]
 
 [node name="Icon" type="Sprite2D"]
-position = Vector2(554, 301)
 texture = ExtResource("1_jswps")
 script = ExtResource("2_uovsi")
