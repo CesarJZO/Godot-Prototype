@@ -14,4 +14,8 @@ text = "Toggle Motion"
 [node name="Icon" parent="." instance=ExtResource("1_oqfhs")]
 position = Vector2(610, 341)
 
+[node name="Timer" type="Timer" parent="Icon"]
+wait_time = 4.263
+autostart = true
+
 [connection signal="pressed" from="Button" to="Icon" method="OnButtonPressed"]

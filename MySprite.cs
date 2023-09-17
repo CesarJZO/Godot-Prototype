@@ -7,6 +7,12 @@ public sealed partial class MySprite : Sprite2D
     [Export] private int speed = 400;
     private float _angularSpeed = Mathf.Pi;
 
+    public override void _Ready()
+    {
+        Timer timer = GetNode<Timer>("Timer");
+        timer.Timeout += OnTimerTimeout;
+    }
+
     public override void _Process(double delta)
     {
         Rotation += _angularSpeed * (float)delta;
@@ -17,5 +23,10 @@ public sealed partial class MySprite : Sprite2D
     public void OnButtonPressed()
     {
         SetProcess(!IsProcessing());
+    }
+
+    private void OnTimerTimeout()
+    {
+        Visible = !Visible;
     }
 }
